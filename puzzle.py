@@ -1,23 +1,16 @@
 import random
-from random import randint
 
-w, h = 3, 3;  # Defines width and height of the initialState Array
-
-initialState = [[0 for x in range(w)] for y in range(h)]
+initialIndex = random.sample(range(0, 9), 9)
 
 stateSpace = []  # Calculation of possibilities
 
 actions = []  # up,down, left, right
 
-# initGoalState = [[1, 2, 3][4, 5, 6][7, 8, 0]]
+initGoalState = [[1, 2, 3],[4, 5, 6],[7, 8, 0]]
 
-# goalState = tuple(initGoalState)
+lol = lambda lst, sz: [lst[i:i+sz] for i in range(0, len(lst), sz)]     # Divides an array in equal chunks
 
-for i in initialState:
-    # randint(0, 9)
-    random.sample(range(0, 9), 3)
-    # for j in initialState:
+initialState = lol(initialIndex, 3)
 
-# print(randint(0,9))
-
+print(initialIndex)
 print(initialState)
